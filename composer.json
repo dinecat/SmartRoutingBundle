@@ -1,0 +1,29 @@
+{
+    "name": "dinecat/smart-routing-bundle",
+    "type": "symfony-bundle",
+    "description": "Provide extended functionality for routing",
+    "keywords": ["routing", "slug", "redis"],
+    "homepage": "https://github.com/dinecat/SmartRoutingBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":     "Dinecat",
+            "homepage": "http://dinecat.com"
+        },
+        {
+            "name": "Mykola Zyk",
+            "email": "relo.san.pub@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+    },
+    "suggest": {
+        "predis/predis": "For using Redis for routes cache"
+    },
+    "autoload": {
+        "psr-0": {"Dinecat\\SmartRoutingBundle": ""}
+    },
+    "target-dir": "Dinecat/SmartRoutingBundle"
+}

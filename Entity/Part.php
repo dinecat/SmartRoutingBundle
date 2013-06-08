@@ -22,6 +22,7 @@ use DateTime;
  *     uniqueConstraints={@ORM\UniqueConstraint(name="dsr_part_name_idx", columns={"name"})}
  * )
  * @ORM\Entity(repositoryClass="Dinecat\SmartRoutingBundle\Entity\Repository\PartRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Part
 {

@@ -55,7 +55,7 @@ class SlugManager
     {
         $part = $this->getPartByName($partName);
 
-        if ($part->isMultilang()) {
+        if (!$part->isMultilang()) {
             $lang = Slug::LANG_ALL;
         }
 
@@ -121,7 +121,7 @@ class SlugManager
         $slug = $this->getSlugRepository()->findOneBy([
             'part' => $part,
             'name' => $slugName,
-            'lang' => $part->isMultilang() ? Slug::LANG_ALL : $lang
+            'lang' => $part->isMultilang() ? $lang : Slug::LANG_ALL
         ]);
         return $slug ? ($objectId && $slug->getObjectId() == $objectId ? true : false) : true;
     }
@@ -139,7 +139,7 @@ class SlugManager
         return $this->getSlugRepository()->findOneBy([
             'part' => $part,
             'name' => $slugName,
-            'lang' => $part->isMultilang() ? Slug::LANG_ALL : $lang
+            'lang' => $part->isMultilang() ? $lang : Slug::LANG_ALL
         ]);
     }
 

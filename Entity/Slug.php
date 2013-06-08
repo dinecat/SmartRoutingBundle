@@ -19,7 +19,7 @@ use DateTime;
  * @author      Mykola Zyk <relo.san.pub@gmail.com>
  * @ORM\Table(
  *     name="dsr_slug",
- *     uniqueConstraints={@ORM\UniqueConstraint(name="dsr_slug_idx", columns={"part_id", "lang", "slug"})},
+ *     uniqueConstraints={@ORM\UniqueConstraint(name="dsr_slug_idx", columns={"part_id", "lang", "name"})},
  *     indexes={@ORM\Index(name="dsr_object_idx", columns={"part_id", "object_id"})}
  * )
  * @ORM\Entity(repositoryClass="Dinecat\SmartRoutingBundle\Entity\Repository\SlugRepository")

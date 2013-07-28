@@ -17,10 +17,12 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+        "symfony/framework-bundle": ">=2.1.0,<3.0",
+        "doctrine/orm": ">=2.2.3,<3.0"
     },
     "suggest": {
-        "predis/predis": "For using Redis for routes cache"
+        "snc/redis-bundle": "For using Redis for routes cache.",
+        "predis/predis": "Client for Redis."
     },
     "autoload": {
         "psr-0": {"Dinecat\\SmartRoutingBundle": ""}
